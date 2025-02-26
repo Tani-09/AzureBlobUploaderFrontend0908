@@ -23,6 +23,8 @@ jobs:
           submodules: true
           lfs: false
       - name: Install Dependencies
+        run: npm install --force          
+      - name: Install Dependencies
         run: npm install --legacy-peer-deps
     
       - name: Install OIDC Client from Core Package
