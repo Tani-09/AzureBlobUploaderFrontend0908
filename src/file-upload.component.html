@@ -1,0 +1,14 @@
+<div class="container mt-4">
+  <h2>Upload a File</h2>
+  <input
+    type="file"
+    (change)="onFileSelected($event)"
+    class="form-control mb-2"
+  />
+  <button class="btn btn-success" (click)="onUpload()">Upload</button>
+
+  <div *ngIf="fileUrl" class="mt-3">
+    <strong>Uploaded File:</strong>
+    <a [href]="fileUrl" target="_blank">{{ fileUrl }} </a>
+  </div>
+</div>
